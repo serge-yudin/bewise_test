@@ -5,7 +5,7 @@
 
 sudo apt install -y docker docker-compose
 
-git clone https://github.com/serge-yudin/bewise_test
+git clone https://github.com/serge-yudin/bewise_test && cd bewise_test
 
 Первый запуск
 1. docker-compose build  # docker собирает image из Dockerfile (Python + Flask) и скачивате image Postgres если такой не имеется на хост машине
