@@ -3,23 +3,23 @@
 
 Установка на linux (debian family)
 
-sudo apt install -y docker docker-compose
+<code>sudo apt install -y docker docker-compose</code>
 
-git clone https://github.com/serge-yudin/bewise_test && cd bewise_test
+<code>git clone https://github.com/serge-yudin/bewise_test && cd bewise_test</code>
 
-Первый запуск
+<h3>Первый запуск</h3>
 1. docker-compose build  # docker собирает image из Dockerfile (Python + Flask) и скачивате image Postgres если такой не имеется на хост машине
 2. docker-compose up -d  # поднимает БД Postgres и зависящее от бд Flask приложение
 3. docker-compose exec bewise_flask python init_db.py  # создает таблицы в бд из Models
-<hr/>
+<br/>
 Результатом выполнения команды docker ps должны быть два контейнера bewise_flask_test и mypostgres
 также на хост машине будут открыты порты 80 и 5432 (nmap localhost), если порты, на момент запуска, были использованы другими сервисами, то возникнет ошибка
 
-Второй и последующие запуски 
-docker-compose up -d
+<h3>Второй и последующие запуски</h3> 
+<h3>docker-compose up -d</code>
 
-Останов контейнеров(сервисов)
-docker-compose down
+<h3>Останов контейнеров(сервисов)</h3>
+<code>docker-compose down</code>
 
 Тест работы приложения
 В текущей папке (клон репозитория) запустить команду 
