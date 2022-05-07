@@ -8,15 +8,17 @@
 <code>git clone https://github.com/serge-yudin/bewise_test && cd bewise_test</code>
 
 <h3>Первый запуск</h3>
-1. docker-compose build  # docker собирает image из Dockerfile (Python + Flask) и скачивате image Postgres если такой не имеется на хост машине
-2. docker-compose up -d  # поднимает БД Postgres и зависящее от бд Flask приложение
-3. docker-compose exec bewise_flask python init_db.py  # создает таблицы в бд из Models
+<ol>
+  <li><code>docker-compose build</code>  # docker собирает image из Dockerfile (Python + Flask) и скачивате image Postgres если такой не имеется на хост машине</li>
+  <li><code>docker-compose up -d</code>  # поднимает БД Postgres и зависящее от бд Flask приложение</li>
+  <li><code>docker-compose exec bewise_flask python init_db.py</code>  # создает таблицы в бд из Models</li>
+</ol>
 <br/>
 Результатом выполнения команды docker ps должны быть два контейнера bewise_flask_test и mypostgres
 также на хост машине будут открыты порты 80 и 5432 (nmap localhost), если порты, на момент запуска, были использованы другими сервисами, то возникнет ошибка
 
 <h3>Второй и последующие запуски</h3> 
-<h3>docker-compose up -d</code>
+<code>docker-compose up -d</code>
 
 <h3>Останов контейнеров(сервисов)</h3>
 <code>docker-compose down</code>
