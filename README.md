@@ -4,6 +4,7 @@
 Установка на linux (debian family)
 
 sudo apt install -y docker docker-compose
+
 git clone https://github.com/serge-yudin/bewise_test
 
 Первый запуск
